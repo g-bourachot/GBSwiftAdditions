@@ -54,10 +54,8 @@ extension NSMutableAttributedString {
     @discardableResult public func customSystemFont(_ text: String, size: CGFloat, weight: UIFont.Weight, color: UIColor) -> NSMutableAttributedString {
         let attrs: [NSAttributedString.Key: Any] = [.font: UIFont.systemFont(ofSize: size, weight: weight), .foregroundColor: color]
         let styledString = NSMutableAttributedString(string: text, attributes: attrs)
-        append(styledString)
-        
+        append(styledString)        
         return self
-        
     }
 
     @discardableResult public func underlined(_ text: String, color: UIColor = .black) -> NSMutableAttributedString {

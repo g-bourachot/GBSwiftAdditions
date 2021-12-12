@@ -7,7 +7,7 @@
 
 import Foundation
 
-public protocol GBTimerWorkerDelegate: class {
+public protocol GBTimerWorkerDelegate: AnyObject {
     func updateElapsedTime(with timeInterval: TimeInterval)
     func timerDidFinish()
 }

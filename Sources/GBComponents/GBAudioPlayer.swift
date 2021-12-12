@@ -8,7 +8,7 @@
 import Foundation
 import AVFoundation
 
-public protocol GBAudioPlayerDelegate: class {
+public protocol GBAudioPlayerDelegate: AnyObject {
     func didStart()
     func didPause()
     func didFinish()

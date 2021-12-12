@@ -35,7 +35,7 @@ let package = Package(
             dependencies: []),
         .target(
             name: "GBExtensions",
-            dependencies: []),
+            dependencies: ["GBComponents"]),
         .target(
             name: "GBUIKitAdditions",
             dependencies: []),
