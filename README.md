@@ -4,12 +4,12 @@ GBComponents
 - GBAudioPLayer
 - GBTimerWorker
 - GBLocationWorker
-    - func setUpLocationManager()
-    - func requestLocation(_ completion: @escaping (Result<CLLocation, Error>) -> Void)
+    - public func setUpLocationManager()
+    - publicfunc requestLocation(_ completion: @escaping (Result<CLLocation, Error>) -> Void)
 - GBCacheWorker
-    - func saveCache(object: Any, for key: NSString)
-    - func getCachedObject(for key: NSString) -> Any?
-    - func removeCache(for key: NSString)
+    - public func saveCache(object: Any, for key: NSString)
+    - public func getCachedObject(for key: NSString) -> Any?
+    - public func removeCache(for key: NSString)
 
 GBExtensions
 - ArrayAdditions
@@ -60,8 +60,8 @@ GBExtensions
     - public func bold() -> UIFont?
     - public func italic() -> UIFont?
 - UIImageViewAdditions
-    - func downloadedFrom(url: URL, contentMode mode: UIView.ContentMode = .scaleAspectFit)
-    - func downloadedFrom(link: String, contentMode mode: UIView.ContentMode = .scaleAspectFit)
+    - public func downloadedFrom(url: URL, contentMode mode: UIView.ContentMode = .scaleAspectFit)
+    - public func downloadedFrom(link: String, contentMode mode: UIView.ContentMode = .scaleAspectFit)
 - UITableViewAdditions
     - public func registerCells<T: UITableViewCell>(cells: [T])
     - public func dequeueReusableCell<T: UITableViewCell>(for indexPath:IndexPath, withIdentifier cellName:String = String(describing: type(of: T.self))) -> T

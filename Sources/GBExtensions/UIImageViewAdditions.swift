@@ -11,7 +11,7 @@ import UIKit
 import GBComponents
 
 extension UIImageView {
-    func downloadedFrom(url: URL, contentMode mode: UIView.ContentMode = .scaleAspectFit) {
+    public func downloadedFrom(url: URL, contentMode mode: UIView.ContentMode = .scaleAspectFit) {
         let downloadingImageURL = url
         self.contentMode = mode
         if let image = GBCacheWorker.shared.getCachedObject(for: downloadingImageURL.absoluteString as NSString) as? UIImage {
@@ -53,7 +53,7 @@ extension UIImageView {
             }
         }.resume()
     }
-    func downloadedFrom(link: String, contentMode mode: UIView.ContentMode = .scaleAspectFit) {
+    public func downloadedFrom(link: String, contentMode mode: UIView.ContentMode = .scaleAspectFit) {
         guard let url = URL(string: link) else { return }
         downloadedFrom(url: url, contentMode: mode)
     }

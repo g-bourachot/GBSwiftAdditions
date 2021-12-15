@@ -16,10 +16,10 @@ public protocol GBLocationLogic: AnyObject {
 public class GBLocationWorker: NSObject, GBLocationLogic {
     
     //MARK: - Variables
-    let locationManager = CLLocationManager()
-    var completionHandlers : [(Result<CLLocation, Error>) -> Void] = []
+    public let locationManager = CLLocationManager()
+    public var completionHandlers : [(Result<CLLocation, Error>) -> Void] = []
     
-    var location : CLLocation?
+    public var location : CLLocation?
     
     //MARK: - Internal functions
     override init() {
